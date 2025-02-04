@@ -7,6 +7,17 @@ body {
     transition: background-color 0.5s ease;
     line-height: 1.6;
 }
+
+.cloud1{
+    margin-top: 80px;
+    margin-left: 99%;
+}
+
+.cloud2{
+    display: block;
+    margin-left: 1%;
+}
+
 .navbar {
     position: sticky;
     top: 0;
@@ -41,28 +52,29 @@ body {
 
 header.intro-section {
     background-size: cover;
-    height: 70vh;
-    padding: 10px;
+    height: 80vh;
+    padding: 5px;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     text-align: center;
     position: relative;
 }
 
 .content {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .content h1 {
-    font-size: 8vw; 
-    color: #84b4b0;
+    font-size: 4vw; 
+    /* color: #5c7f7c; */
+    color: #4FBDBA;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0 0 20px 0;
 }
 
 .content p {
-    font-size: 3vw;
+    font-size: 1vw;
     color: #555;
     max-width: 500px;
     margin: 0 auto;
@@ -205,11 +217,12 @@ header.intro-section {
 .skill-item strong {
     font-size: 1.2rem;
     margin-bottom: 5px;
-    color: #FFFFFF;
+    color:  #4FBDBA;
 }
 
 .skill-item p {
     color: #a86df0;
+    font-size: larger;
 }
 
 .email-button {
