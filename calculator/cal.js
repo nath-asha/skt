@@ -1,4 +1,4 @@
-function display(a){
+function display(val){
     document.getElementById('result').value += value
     return val
 }
@@ -14,10 +14,21 @@ function myFunction(event) {
         document.getElementById("result").value += event.key; 
 } 
 
+var cal = document.getElementById("calcu"); 
+        cal.onkeyup = function (event) { 
+            if (event.keyCode === 13) { 
+                console.log("Enter"); 
+                let x = document.getElementById("result").value 
+                console.log(x); 
+                solve(); 
+            } 
+        } 
+
 function solve(){
     let x = document.getElementById('result').value
     let y = eval(x)
     document.getElementById("result").value = y
+    return y
 }
 
 function clr()
