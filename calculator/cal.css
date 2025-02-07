@@ -12,6 +12,14 @@ input[type="button"]{
             font-weight: bold; 
             border: none; 
             border-radius: 5px; 
+            grid-gap: 10px;
+            margin:auto;
+}
+
+input[type="button"]:hover {
+
+    background-color: #bebba0;
+
 }
 
 input[type="text"] {
@@ -25,4 +33,5 @@ input[type="text"] {
 
 .container{
     margin-top: 10%;
+    border-radius: 20px;
 }
