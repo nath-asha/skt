@@ -68,3 +68,45 @@ icon{
     padding: 10px;
     cursor: pointer;
 }
+
+.add-to-cart{
+    size: 7;
+    border: #4FBDBA;
+    background-color: rgb(229, 142, 156);
+    box-shadow: #6a5acd; 
+    color: white;
+    display: inline-block; 
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+button{
+    border-radius: 5%;
+    background-color:bisque;
+    color: gray;
+}
+button:hover{
+    background-color: maroon;
+    color: white;
+}
+#table-container {
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color: antiquewhite;
+}
+
+td {
+    padding: 5px;
+}
