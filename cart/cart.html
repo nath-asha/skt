@@ -5,25 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="stylesheet" href="page.css">
+    <style>
+        .card.product-1{
+          height: 80%;
+        }
+        .card.product-1 img {
+          height: 50%;
+        }
+        .row-row {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        
+        .row-row .card {
+          width: 100%;
+        }
+        
+        .row-row .card .card-body {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        #Wid{
+          width: 30%;
+          text-align: center;
+        }
+  
+      </style>
 </head>
 <body>
     <h1>Your Cart</h1>
-    <div class="cartbox">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Price</th>
-                        <th>Qty</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody">  </tbody>
-            </table>
-            <hr>
-        </div>
-    </div>
     <a href="../cart/page.html"><button >Back to Shopping</button></a>
     <div id="table-container">
     <script src="page.js"></script>
+
+    <div class="container">
+        <div class="row-row" id="produt">
+            
+        </div>
+    </div>
+
+    <div class="container" id="Wid">
+        <div class="row" >
+            <div class="col ">
+                <h3 class="text-info">Total: <span id="total"></span></h3>
+                <button id="orderButton" class="btn btn-primary" onclick="Order()">Order Now</button>
+                <p class="text-info" id="emptyCartMsg" style="display: none;">Your cart is empty.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
 </body>
 </html>
