@@ -1,0 +1,43 @@
+body{
+background-color:bisque;
+color: maroon;
+cursor: pointer;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body h1{
+    text-align: center;
+    font-family: cursive;
+}
+.navbar img{
+    height: 25px;
+    width: 25px;
+    margin-left: 95%;
+    background-color:rgb(220, 159, 159)
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 100px;
+    background-color: rgb(238, 241, 243);
+    scroll-padding-top: 60px;
+}
+
+.product {
+    margin: 10px;
+    border: 10px solid;
+    width: 25%;
+    height: 400px;
+    border-color:bisque;
+    color:brown;
+    text-align: center;
+    text-decoration: double;
+  
+}
+
+.product img{
+    height: 200px;
+    width: 250px;
+}
