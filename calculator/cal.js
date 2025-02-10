@@ -1,69 +1,18 @@
-function display(val){
-    document.getElementById('result').value += value
-    return val
-}
-
-function myFunction(event) { 
-    if (event.key == '0' || event.key == '1' 
-        || event.key == '2' || event.key == '3' 
-        || event.key == '4' || event.key == '5' 
-        || event.key == '6' || event.key == '7' 
-        || event.key == '8' || event.key == '9' 
-        || event.key == '+' || event.key == '-' 
-        || event.key == '*' || event.key == '/') 
-        document.getElementById("result").value += event.key; 
-} 
-
-var cal = document.getElementById("calcu"); 
-        cal.onkeyup = function (event) { 
-            if (event.keyCode === 13) { 
-                console.log("Enter"); 
-                let x = document.getElementById("result").value 
-                console.log(x); 
-                solve(); 
-            } 
-        } 
-
-function solve(){
-    let x = document.getElementById('result').value
-    let y = eval(x)
-    document.getElementById("result").value = y
-    return y
-}
-
-function clr()
-{
-    document.getElementById("result").value = ""
+function display(value) {
+   document.getElementById("display").value += value;
 }
 
 
+function clr() {
+   document.getElementById("display").value = "";
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let a = prompt()
-let b = prompt()
-
-let add = (a,b) => { a+b }
-let substract = (a,b) => { a-b }
-let multiply = (a,b) => {a*b}
-let divde = (a,b) => {a/b}
-let modulo = (a,b) => {a%b}
-
+function solve() {
+   try {
+       let result = eval(document.getElementById("display").value);
+       document.getElementById("display").value = result;
+   } catch {
+       alert("Invalid Expression");
+       clearDisplay();
+   }
+}

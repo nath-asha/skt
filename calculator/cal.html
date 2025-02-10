@@ -5,41 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="cal.css">
-    <script src="cal.js"></script>
+    
 </head>
 <body>
     <div class="container">
-        <br>
-    <table id="calcu">
-        <tr>
-            <td colspan="3"><input type="text" id="result"></td>
-            <td><input type="button" value="C" onclick="clr()" class="clear" ></td>
-        </tr>
-        <tr>
-            <td><input id="btn" type="button" value="1"  onclick="display('1')" onmousedown="myFun(event)"></td>
-            <td><input type="button" value="2"  onclick="display('2')" onmousedown="myFun(event)"></td>
-            <td><input type="button" value="3" \ onclick="display('3')" onmousedown="myFun(event)"></td>
-            <td><input type="button" value="/"  onclick="display('/')" onmousedown="myFun(event)"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="4"  onclick="display('4')" onmousedown="myFun(event)"></td>
-            <td><input type="button" value="5"  onclick="display('5')" onmousedown="myFun(event)"></td>
-            <td><input type="button" value="6"  onclick="display('6')" onkeydown="myFun(event)"></td>
-            <td><input type="button" value="*"  onclick="display('*')" onkeydown="myFun(event)"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="7"  onclick="display('7')" onkeydown="myFun(event)"></td>
-            <td><input type="button" value="8"  onclick="display('8')"  onkeydown="myFun(event)"></td>
-            <td><input type="button" value="9"  onclick="display('9')" onkeydown="myFun(event)"></td>
-            <td><input type="button" value="+"  onclick="display('+')" onkeydown="myFun(event)"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="."  onclick="display('.')" onkeyown="myFun(event)"></td>
-            <td><input type="button" value="0"  onclick="display('0')" onkeydown="myFun(event)"></td>
-            <td><input type="button" value="="  onclick="solve()"></td>
-            <td><input type="button" value="-"  onclick="display('-')" onkeydown="myFun(event)"></td>
-        </tr>
-    </table>
-    </div>
+        <div class="top">
+            <input type="text" id="display" disabled> 
+            <button onclick="clr()">C</button>
+        </div>
+        <div class="buttons">
+            
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('-')">-</button>
+        
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('*')">*</button>
+        
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('/')">/</button>
+     
+            <button onclick="display('0')">0</button>
+            <button onclick="display('.')">.</button>
+            <button onclick="solve()">=</button>
+            <button onclick="display('+')">+</button>
+        </div>
+       </div>
+    <script src="cal.js"></script>
 </body>
 </html>

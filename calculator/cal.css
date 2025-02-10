@@ -1,9 +1,62 @@
-table{
-    margin-left: auto;
-    margin-right: auto;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
 }
 
-input[type="button"]{
+.container {
+    width: 230px;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+    border: none;
+    background: #444;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #666;
+}
+
+button:active {
+    background: #888;
+}
+
+#display {
+    width: 90%;
+    height: 50px;
+    font-size: 1.5em;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.top {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Space between input and button */
+}
+/* input[type="button"]{
     width: 100%; 
             padding: 20px 40px; 
             background-color: rgb(29, 44, 29); 
@@ -20,7 +73,7 @@ input[type="button"]:hover {
 
     background-color: #bebba0;
 
-}
+} */
 
 input[type="text"] {
     padding: 20px 30px; 
