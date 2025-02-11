@@ -72,7 +72,7 @@ icon{
 .add-to-cart{
     size: 7;
     border: #4FBDBA;
-    background-color: rgb(229, 142, 156);
+    background-color: rgb(158, 41, 61);
     box-shadow: #6a5acd; 
     color: white;
     display: inline-block; 
@@ -86,8 +86,8 @@ icon{
 
 button{
     border-radius: 5%;
-    background-color:bisque;
-    color: gray;
+    background-color:rgb(254, 202, 139);
+    color: rgb(49, 38, 38);
 }
 button:hover{
     background-color: maroon;
