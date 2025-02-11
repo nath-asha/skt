@@ -15,34 +15,41 @@
         .row-row {
           display: flex;
           flex-wrap: wrap;
-          gap: 10px;
+          gap: 15px;
+          justify-self: center;
         }
         
         .row-row .card {
+          margin-top: 25px;
           width: 100%;
-          background-color:white;
+          background-color:azure;
           box-shadow: 5px;
         }
         
         .row-row .card .card-body {
           height: 100%;
           display: flex;
-          background-color:white;
+          background-color:azure;
           box-shadow: 5px;
           flex-direction: column;
           justify-content: space-between;
+          border-color: black;
+          border: 10px;
         }
         #Wid{
           width: 30%;
           text-align: center;
-          background-color:white;
+          background-color: azure;
           box-shadow: 5px;
-        }
+          margin-top: 50px;
+          justify-self: center;
+         }
   
       </style>
 </head>
 <body>
     <h1>Your Cart</h1>
+    <div class="area">
     <div id="table-container">
     <script src="page.js"></script>
 
@@ -60,6 +67,7 @@
                 <p class="text-info" id="emptyCartMsg" style="display: none;">Your cart is empty.</p>
             </div>
         </div>
+    </div>
     </div>
     <br>
     <br>

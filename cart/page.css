@@ -110,3 +110,8 @@ thead {
 td {
     padding: 5px;
 }
+
+.area{
+    justify-self: center;
+    background-color: white;
+}
