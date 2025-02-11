@@ -24,7 +24,7 @@ function updateCart() {
 
     var innerHTML = `
       <div class="card product-1">
-        <img src="../Images/${item.imageName}" alt="Loading">
+        <img src="${item.imageName}" alt="Loading">
         <div class="card-body text-center">
           <h5 class="card-title">${item.productName}</h5>
           <p class="card-text">Price: ₹${item.price}</p>
