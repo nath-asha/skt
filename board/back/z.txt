@@ -1,0 +1,96 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Leaderboard from './Leaderboard';
+import './App.css';
+
+function App() {
+    const [leaderboardData, setLeaderboardData] = useState([]);
+
+    useEffect(() => {
+        fetchLeaderboard();
+    }, []);
+
+    const fetchLeaderboard = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/participants');
+            setLeaderboardData(response.data);
+        } catch (error) {
+            console.error("Error fetching leaderboard data", error);
+        }
+    };
+
+    const addParticipant = async (name, score, git) => {
+        try {
+            await axios.post('http://localhost:5000/participants', { name, score, git });
+            fetchLeaderboard(); // Refresh leaderboard
+        } catch (error) {
+            console.error("Error adding participant", error);
+        }
+    };
+
+    return (
+        <div className="App">
+            <h1>Leaderboard</h1>
+            <ParticipantForm addParticipant={addParticipant} />
+            <Leaderboard leaderboardData={leaderboardData} />
+        </div>
+    );
+}
+
+function ParticipantForm({ addParticipant }) {
+    const [name, setName] = useState('');
+    const [score, setScore] = useState('');
+    const [git, setGit] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!name || !score || !git) return;
+        addParticipant(name, score, git);
+        setName('');
+        setScore('');
+        setGit('');
+    };
+
+    return (
+        <form onSubmit={handleSubmit} className="participant-form">
+            <input type="text" placeholder="Participant Name" value={name} onChange={(e) => setName(e.target.value)} required />
+            <input type="number" placeholder="Score" value={score} onChange={(e) => setScore(e.target.value)} required />
+            <input type="text" placeholder="GitHub Link" value={git} onChange={(e) => setGit(e.target.value)} required />
+            <button type="submit">Add Participant</button>
+        </form>
+    );
+}
+
+export default App;
+
+import React from 'react';
+
+function Leaderboard({ leaderboardData }) {
+    return (
+        <div>
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>GitHub Link</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {leaderboardData.map((participant, index) => (
+                        <tr key={index}>
+                            <td>{index + 1}</td>
+                            <td>{participant.name}</td>
+                            <td><a href={participant.git} target="_blank" rel="noopener noreferrer">{participant.git}</a></td>
+                            <td>{participant.score}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+}
+
+export default Leaderboard;
