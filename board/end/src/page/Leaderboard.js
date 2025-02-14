@@ -3,15 +3,13 @@ import React from 'react';
 function Leaderboard({ leaderboardData }) {
     return (
         <div>
-            <h2>Leaderboard</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Rank</th>
                         <th>Name</th>
-                        <th>GithubLink</th>
+                        <th>GitHub Link</th>
                         <th>Score</th>
-                        {/* <th>Badge</th> */}
                     </tr>
                 </thead>
                 <tbody>
@@ -20,7 +18,6 @@ function Leaderboard({ leaderboardData }) {
                             <td>{index + 1}</td>
                             <td>{participant.name}</td>
                             <td><a href={participant.git} target="_blank" rel="noopener noreferrer">{participant.git}</a></td>
-                            {/* <td>{participant.badge}</td> */}
                             <td>{participant.score}</td>
                         </tr>
                     ))}
@@ -31,3 +28,23 @@ function Leaderboard({ leaderboardData }) {
 }
 
 export default Leaderboard;
+
+// import React from 'react';
+
+// function Leaderboard({ leaderboardData }) {
+//     return (
+//         <div>
+//             <h2>Top Participants</h2>
+//             <ul>
+//                 {leaderboardData.map((participant, index) => (
+//                     <li key={index}>
+//                         {participant.name} - {participant.score} 
+//                         (<a href={participant.git} target="_blank" rel="noopener noreferrer">GitHub</a>)
+//                     </li>
+//                 ))}
+//             </ul>
+//         </div>
+//     );
+// }
+
+// export default Leaderboard;
